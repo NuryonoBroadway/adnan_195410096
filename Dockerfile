@@ -4,9 +4,9 @@ RUN apk add --update nginx && \
 	mkdir -p /tmp/nginx
 
 
-COPY files/nginx.conf /usr/local/etc/nginx/nginx.conf
-COPY files/default.conf /usr/local/etc/nginx/conf.d/default.conf
-ADD files/index.html /usr/local/share/nginx/html/
+COPY files/nginx.conf /etc/nginx/nginx.conf
+COPY files/default.conf /etc/nginx/conf.d/default.conf
+ADD files/index.html /usr/share/nginx/html/
 
 
 EXPOSE 80/tcp
